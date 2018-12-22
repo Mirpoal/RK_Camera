@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="show_pip">false</bool>
+    <bool name="can_change_camera">false</bool>
+    <bool name="refresh_with_local_socket">false</bool>
+</resources>

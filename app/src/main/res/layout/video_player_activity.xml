@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.xng.rkcamera.VideoSurfaceView
+        android:id="@+id/main_surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"/>
+
+    <com.example.xng.rkcamera.Map.MyMapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoView"
+        android:layout_gravity="top"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/mode_change_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/video_mode"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/video"/>
+            <ImageButton
+                android:id="@+id/photo_mode"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/photo"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/video_player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants" >
+
+        <ImageButton
+            android:id="@+id/mode_change"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mode_change"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical|left"/>
+
+        <LinearLayout
+            android:id="@+id/burst_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8000"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|right"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/burst_off"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_close"/>
+
+            <ImageButton
+                android:id="@+id/burst_3"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_3"/>
+
+            <ImageButton
+                android:id="@+id/burst_4"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_4"/>
+
+            <ImageButton
+                android:id="@+id/burst_5"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timelapse_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8000"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|right">
+
+            <ImageButton
+                android:id="@+id/timelapse_off"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_close"/>
+
+            <ImageButton
+                android:id="@+id/timelapse_1"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_1"/>
+
+            <ImageButton
+                android:id="@+id/timelapse_5"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_5"/>
+
+            <ImageButton
+                android:id="@+id/timelapse_10"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_10"/>
+
+            <ImageButton
+                android:id="@+id/timelapse_30"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_30"/>
+
+            <ImageButton
+                android:id="@+id/timelapse_60"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/normal_60"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_title"
+            android:background="#8000"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/play_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/play_black"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/video_control_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8000"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:layout_gravity="center|bottom">
+
+            <!--
+                <ImageButton
+                    android:id="@+id/ib_sreenshot"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/play_cut"
+                    android:contentDescription="@null" />
+            -->
+
+                <ImageButton
+                    android:id="@+id/ib_camera_change"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/camera_change"
+                    android:contentDescription="@null"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/ib_play_control"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/play_play"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/ib_photograph"
+                    android:layout_width="25dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/play_camera"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/screen_status"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/enter_full_screen"
+                    android:visibility="gone"/>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
